@@ -12,16 +12,16 @@ def recommend_destination(city, category, price):
 #UI streamlit
 def main():
     st.title("Recommendation Tourism Destination")
-    city = st.text_input("Masukkan kota tujuan : ")
+    city = st.selectbox("Masukkan kota tujuan : ", ['Jakarta', 'Yogyakarta', 'Bandung', 'Semarang', 'Surabaya'])
     category = st.selectbox("Pilih kategori wisata : ", ['Budaya', 'Taman Hiburan', 'Cagar Alam', 'Bahari',
        'Pusat Perbelanjaan', 'Tempat Ibadah'])
-    price = st.slider("Pilih budget : ", 0, 900000, (0, 900000), 0)
+    price = st.slider("Pilih budget : ", 0, 900000, (0, 900000), 1)
 
     if st.button("Recommendation"):
         recommendations = recommend_destination(city, category, price)
-        st.success("Berikut rekomendasi tempat wisata untuk Anda : ")
-        for recommendation in recommendations:
-            st.write(recommendation)
+        # st.success("Berikut rekomendasi tempat wisata untuk Anda : ")
+        # for recommendation in recommendations:
+        #     st.write(recommendation)
             
 if __name__ == "__main__":
     main()

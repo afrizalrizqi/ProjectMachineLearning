@@ -19,13 +19,13 @@ import streamlit as st
 import random, time
 
 # Untuk visualisasi data
-# import seaborn as sns
+import seaborn as sns
 import matplotlib.pyplot as plt
 import plotly.express as px 
 
 # %matplotlib inline
-# sns.set_palette('Set1')
-# sns.set()
+sns.set_palette('Set1')
+sns.set()
 
 # Untuk pemodelan
 import tensorflow as tf

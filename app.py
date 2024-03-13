@@ -1,5 +1,5 @@
 import streamlit as st
-import ProjectML as pm #import kode dari file notebook.py
+import rekomendasisistem as pm #import kode dari file notebook.py
 
 #Function untuk merekomendasikan tempat wisara
 def recommend_destination(city, category, price):
@@ -15,7 +15,7 @@ def main():
     city = st.selectbox("Masukkan kota tujuan : ", ['Jakarta', 'Yogyakarta', 'Bandung', 'Semarang', 'Surabaya'])
     category = st.selectbox("Pilih kategori wisata : ", ['Budaya', 'Taman Hiburan', 'Cagar Alam', 'Bahari',
        'Pusat Perbelanjaan', 'Tempat Ibadah'])
-    price = st.slider("Pilih budget : ", 0, 900000, (0, 900000), 1)
+    price = st.slider("Pilih budget : ", 0, 900000, (0, 900000), 5000)
 
     if st.button("Recommendation"):
         recommendations = recommend_destination(city, category, price)
